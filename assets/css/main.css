@@ -1,0 +1,59 @@
+@import url('./_reset.css');
+*{
+    text-decoration: none;
+}
+.overlay {
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+}
+.active{
+    opacity: 1;
+}
+.overlay-nav-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    font-size: 45px;
+}
+.overlay-nav-links a{
+    margin-top: 10px;
+    color: #aaa;
+}
+.overlay-nav-links a:hover{
+    color: #fff;
+    transition: .9s cubic-bezier(.65,.99,1,-0.82);
+}
+.fa-xmark{
+    position: absolute;
+    top: 5%;
+    right: 7%;
+    font-size: 45px;
+    color: #aaa;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-bars {
+    display: none;
+}
+
+@media (max-width:768px) {
+    .fa-bars {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
