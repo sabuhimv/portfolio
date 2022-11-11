@@ -58,7 +58,6 @@ body {
     align-items: center;
     /* new */
     padding: 0 112.5px;
-    /* margin: 0 auto; */
 }
 
 #header .nav-links a{
@@ -182,4 +181,40 @@ body {
     }
 
 }
+@media (max-width:575px){
+    #introsection .introsection-left h1{
+        font-size:2.375rem ;
+    }
+}
 /* INTROSECTION END */
+
+
+/* TRUSTED BY START */
+#trusted-by{
+
+}
+#trusted-by h5{
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+
+}
+#trusted-by .trusted-companies{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width:768px) and (min-width:476px){
+    #trusted-by .trusted-companies .trusted-company:nth-child(odd){
+        display: none;
+    }
+
+}
+@media (max-width:475px){
+   #trusted-by .trusted-companies .trusted-company:not(:first-child){
+        display: none;
+        padding: 0;
+   }
+}
+/* TRUSTED BY END */
