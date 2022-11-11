@@ -1,6 +1,20 @@
+:root{
+    --intro-h1:#FF8A56;
+    --intro-small:#666;
+}
+
 @import url('./_reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,700&display=swap');
 *{
     text-decoration: none;
+    /* outline: 1px solid red; */
+}
+/* 
+    .container{
+    padding: 0 112.5px;
+} */
+body {
+    font-family: 'Roboto', sans-serif;
 }
 .overlay {
     position: fixed;
@@ -37,18 +51,41 @@
     font-size: 45px;
     color: #aaa;
 }
-
-.header {
+/* HEADER START */
+#header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* new */
+    padding: 0 112.5px;
+    /* margin: 0 auto; */
+}
+
+#header .nav-links a{
+    color: #000;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-left: 10px;
+}
+#header .nav-links a img{
+    margin-left: 8px;
 }
 
 .fa-bars {
     display: none;
 }
+@media(max-width:1375px){
+    #header{
+        padding:0 50px;
+    }
+    
+}
 
 @media (max-width:768px) {
+    #header{
+        padding: 0;
+    }
     .fa-bars {
         display: flex;
     }
@@ -56,4 +93,93 @@
     .nav-links {
         display: none;
     }
+
 }
+/* HEADER END */
+
+
+/* INTROSECTION START */
+#introsection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom:5rem ;
+    flex-wrap: wrap;
+
+    padding: 0 112.5px;
+}
+#introsection .introsection-left{
+    padding-top: 67px;
+    min-width: 559px;
+}
+#introsection .introsection-left h1{
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 82px;
+    letter-spacing: 2px;
+}
+#introsection .introsection-left h1 span{
+    color: var(--intro-h1);
+}
+#introsection .introsection-left small{
+    margin-top: 1.5rem;
+    color: var(--intro-small);
+    line-height: 2rem;
+    font-weight: 400;
+    font-size: 1.375rem;
+}
+#introsection .introsection-left .button-groups{
+    margin-top: 2.375rem;
+}
+#introsection .introsection-left .button-groups button{
+    width: 151px;
+    height: 58px;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    margin-right: 10px;
+}
+#introsection .introsection-left .button-groups a{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: #000000;
+}
+#introsection .introsection-left .button-groups a img{
+    margin-left: 8px;
+}
+#introsection .introsection-right{
+    padding-top: 70px;
+    min-width: 376px;
+} 
+#introsection .introsection-right img{
+    width: 100%;
+}
+@media(max-width:1375px){
+    #introsection{
+        padding: 0;
+    }
+    #introsection .introsection-left{
+        margin: 0 auto;
+    }
+    #introsection .introsection-right{
+        margin: 0 auto;
+    }
+}
+@media (max-width:655px){
+    #introsection{
+        text-align: center;
+    }
+    #introsection .introsection-left h1{
+        font-size:3.375rem ;
+    }
+    #introsection .introsection-left small{
+        font-size:1rem ;
+    }
+    #introsection .introsection-left{
+        padding-top: 30px;       
+    }
+
+}
+/* INTROSECTION END */
