@@ -1,6 +1,7 @@
 :root {
     --intro-h1: #FF8A56;
     --intro-small: #666;
+    --nav-hover:#666;
 }
 
 @import url('./_reset.css');
@@ -58,7 +59,7 @@ body {
     justify-content: space-between;
     align-items: center;
     /* new */
-    padding: 0 112.5px;
+    padding: 44.98px 112.5px 0 112.5px;
 }
 
 #header .nav-links a {
@@ -76,6 +77,40 @@ body {
 .fa-bars {
     display: none;
 }
+
+.nav-links a {
+    background-image: linear-gradient(to right, #666, #666 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-links a:before {
+    content: "";
+    background: var(--nav-hover);
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    background-position: 0;
+  }
+  
+  .nav-links a:hover::before {
+    width: 100%;
+  }
+
 
 @media(max-width:1375px) {
     #header {
@@ -199,11 +234,17 @@ body {
 
 
 /* TRUSTED BY START */
+#trusted-by{
+    /* margin: 0 112.5px 155px 112.5px; */
+    /* margin: 0 0 155px 0; */
+    margin-bottom: 155px;
+}
 #trusted-by h5 {
     text-align: center;
     font-weight: 400;
     font-size: 18px;
     line-height: 18px;
+    margin-bottom:45px ;
 
 }
 
@@ -231,9 +272,8 @@ body {
 
 /* SERVICES START */
 #services {
-    padding: 8rem 0;
+    margin-bottom: 100px;
 }
-
 #services h6 {
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -252,7 +292,7 @@ body {
     line-height: 3.7rem;
     letter-spacing: 1px;
     margin-bottom: 6rem;
-    margin: 0 0 6rem 0;
+    margin: 0 0 117.5px 0;
 }
 
 #services .services-cards {
@@ -360,6 +400,7 @@ ul li {
 #projects .boxes .box {
     background-color: #fff;
     margin-right: 24px;
+    padding-bottom: 32px;
 }
 
 #projects .boxes .box img {
@@ -373,11 +414,14 @@ ul li {
     text-transform: uppercase;
     font-size: .8rem;
     line-height: .8rem;
+    padding-left: 32px;
 }
 
 #projects .boxes .box p {
     font-weight: 700;
     font-size: 1rem;
+    margin-bottom:16px ;
+    padding-left: 32px;
     /* line-height: 1.625rem; */
 }
 
@@ -385,6 +429,8 @@ ul li {
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 1.125rem;
+    margin-bottom:32px ;
+    padding-left: 32px;
 }
 
 #projects .boxes .box a img {
@@ -394,24 +440,30 @@ ul li {
 #projects .arrowes-box {
     display: flex;
     justify-content: end;
-    margin: .5rem;
+    /* margin: .5rem; */
+    margin-top: 26px;
 }
+#projects .arrowes-box div{
+    margin-left: 7px;
+}
+@media(max-width:1170px) {
+    #projects .boxes .third-box{
+        display: none;
+    }
 
+}
 @media(max-width:925px) {
     #projects{
         padding: 0;
     }
-    #projects .boxes {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #projects .boxes .box {
-        margin-bottom: 30px;
-        border: 1px solid black;
+    #projects .boxes .second-box{
+        display: none;
     }
     #projects .arrowes-box {
         display: flex;
+        justify-content: center;
+    }
+    #projects .boxes {
         justify-content: center;
     }
 }
@@ -435,10 +487,10 @@ ul li {
 #blogs {
     display: flex;
     justify-content: space-between;
-    padding: 0 112.5px 8rem 112.5px;
+    padding: 118px 112.5px 8rem 112.5px;
     background-color: #000;
     color: #fff;
-    margin-top: -189px;
+    margin-top: -230px;
     margin-left: -8px;
     margin-right: -8px;
     z-index: -3;
@@ -479,6 +531,7 @@ ul li {
 
 #blogs .blogs-right .article h4 {
     color: rgba(255, 255, 255, 0.7);
+    margin-top: 61px;
 }
 
 #blogs .blogs-right .article p {
@@ -492,18 +545,17 @@ ul li {
     font-size: 1.125rem;
     line-height: 1.125rem;
 }
-
-@media(max-width:1008px) {
+@media(max-width:1140px) {
     #blogs {
-        margin-top: -207px;
+        margin-top: -248px;
+    }
+}
+@media(max-width:1040px) {
+    #blogs {
+        margin-top: -230px;
     }
 }
 
-@media(max-width:924px) {
-    #blogs {
-        margin-top: -220px;
-    }
-}
 
 @media(max-width:907px) {
     #blogs {
@@ -531,7 +583,7 @@ ul li {
 
 /* PRODUCT START */
 #product {
-    padding: 8rem 112.5px 0 112.5px;
+    padding: 8rem 112.5px 5rem 112.5px;
 }
 
 #product .product-head {
@@ -576,6 +628,11 @@ ul li {
     flex-direction: column;
     justify-content: space-between;
 }
+#product .product-body :not(:last-child)
+{
+    margin-right: 16px;
+}
+
 
 @media(max-width:1426px) {
     #product .product-body .pb-right {
@@ -703,7 +760,7 @@ ul li {
 #education-and-work .work .work-body .article .wb-right .wb-r-title a{
     position:absolute;
     right: 0;
-    top: 0;
+    /* top: 0; */
 }
 #education-and-work .work .work-body .article .wb-right .wb-r-texts{
     display: flex;
@@ -877,6 +934,7 @@ ul li {
     padding: 0 112.5px 2rem 112.5px;
     margin-left: -8px;
     margin-right: -8px;
+
 }
 
 #faq .faq-head {
@@ -949,7 +1007,8 @@ ul li {
 /* SERVICES  START*/
 .services{
     color: #fff;
-    padding-top: 9rem;
+    padding-top: 178px;
+    
 }
 .services .services-head h1{
     font-weight: 700;
@@ -1052,6 +1111,13 @@ ul li {
     .footer{
         flex-direction: column;
         align-items: center;
+    }
+    .footer :first-child{
+        font-size: .8rem;
+        margin: 0 0 1rem 0;
+    }
+    .footer :not(:first-child){
+        display: none;
     }
 }
 /* FOOTER END */
