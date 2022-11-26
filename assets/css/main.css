@@ -131,7 +131,6 @@ body {
     .nav-links {
         display: none;
     }
-
 }
 
 /* HEADER END */
@@ -171,13 +170,31 @@ body {
 #introsection .introsection-left .button-groups {
     margin-top: 2.375rem;
 }
-#introsection .introsection-left .button-groups button {
-    width: 151px;
-    height: 58px;
-    background-color: #000;
+
+.button {
+    width: 151px;    
+    padding: 15px 0;
+    text-align: center;
+    color: #000;
+    font-weight: 400;
+    margin-right: 30px;
+    cursor: pointer;
+    display: inline-block;
+  }
+.button-2 {
     color: #fff;
-    font-size: 18px;
-    margin-right: 10px;
+    border: 3px solid #000;
+    background-image: -webkit-linear-gradient(30deg, #000 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #000 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+.button-2:hover {
+    background-position: 100%;
+    color: #000;
 }
 #introsection .introsection-left .button-groups a {
     font-weight: 400;
@@ -235,8 +252,6 @@ body {
 
 /* TRUSTED BY START */
 #trusted-by{
-    /* margin: 0 112.5px 155px 112.5px; */
-    /* margin: 0 0 155px 0; */
     margin-bottom: 155px;
 }
 #trusted-by h5 {
@@ -450,7 +465,6 @@ ul li {
     #projects .boxes .third-box{
         display: none;
     }
-
 }
 @media(max-width:925px) {
     #projects{
@@ -929,21 +943,20 @@ ul li {
 /* Testimonials end */
 
 /* FAQ START */
-#faq {
+#dark-section {
     background-color: #000;
     padding: 0 112.5px 2rem 112.5px;
     margin-left: -8px;
     margin-right: -8px;
-
 }
 
-#faq .faq-head {
+#dark-section .faq-head {
     text-align: center;
     padding-top:5rem ;
     padding-bottom: 150px;
 }
 
-#faq .faq-head h3 {
+#dark-section .faq-head h3 {
     color: #FF8A56;
     font-weight: 700;
     font-size: 1.375rem;
@@ -951,35 +964,35 @@ ul li {
     letter-spacing: 4px;
     text-transform: uppercase;
 }
-#faq .faq-head h1{
+#dark-section .faq-head h1{
     color: #FFFFFF;
     font-weight: 700;
     font-size: 3.5rem;
     line-height: 3.5rem;
     letter-spacing: 1px;
 }
-#faq .faq-body{
+#dark-section .faq-body{
     display: flex;
     justify-content: space-around;
 }
-#faq .faq-body .faq-body-left,.faq-body-right{
+#dark-section .faq-body .faq-body-left,.faq-body-right{
     width: 40%;
 }
-#faq .faq-body p{
+#dark-section .faq-body p{
     color: #FFFFFF;
     letter-spacing: 0.3px;
     font-weight: 700;
     font-size: 1rem;
     line-height: 31px;
 }
-#faq .faq-body .faq-body-left article{
+#dark-section .faq-body .faq-body-left article{
     display: flex;
     justify-content: space-between;
     border-bottom:1px solid rgba(229, 229, 229, 0.3); ;
     padding-bottom: 3rem;
     margin-bottom: 2rem;
 }
-#faq .faq-body .faq-body-right article{
+#dark-section .faq-body .faq-body-right article{
     display: flex;
     justify-content: space-between;
     border-bottom:1px solid rgba(229, 229, 229, 0.3); ;
@@ -988,17 +1001,17 @@ ul li {
 }
 
 @media (max-width:1111px){
-    #faq .faq-body{
+    #dark-section .faq-body{
         flex-direction: column;
         align-items: center;
     }
-    #faq .faq-body .faq-body-left,.faq-body-right{
+    #dark-section .faq-body .faq-body-left,.faq-body-right{
         width: 80%;
     }
 }
 
 @media (max-width:752px) {
-    #faq {
+    #dark-section {
         padding: 0;
     }
 }
