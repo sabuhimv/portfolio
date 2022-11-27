@@ -126,6 +126,8 @@ body {
 
     .fa-bars {
         display: flex;
+        font-size: 24px;
+        cursor: pointer;
     }
 
     .nav-links {
@@ -559,9 +561,17 @@ ul li {
     font-size: 1.125rem;
     line-height: 1.125rem;
 }
+@media(max-width:1365px) {
+    #blogs .blogs-left{
+        padding-right: 60px;
+    }
+}
 @media(max-width:1140px) {
     #blogs {
-        margin-top: -248px;
+        margin-top: -230px;
+    }
+    #blogs .blogs-left{
+        padding-right: 0px;
     }
 }
 @media(max-width:1040px) {
@@ -569,7 +579,6 @@ ul li {
         margin-top: -230px;
     }
 }
-
 
 @media(max-width:907px) {
     #blogs {
